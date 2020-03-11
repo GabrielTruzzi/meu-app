@@ -80,7 +80,7 @@
 <div class="container">
   <h1>Cadastro de novo livro</h1>
   <br><br>
-  <form method="post" target="_blank">
+  <form method="post">
   @CSRF
 
     <label for="titulo">Título</label>
