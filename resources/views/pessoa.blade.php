@@ -43,16 +43,16 @@ form {
 
 </style>
 
-<title>Livro Cadastrados</title>
+<title>Pessoas Cadastradas</title>
 
 
 <div class="container">
 
-<h2>Livros Cadastrados: </h2><br>
+<h2>Pessoas Cadastradas: </h2><br>
 
-@foreach($livros as $livro)
+@foreach($pessoas as $pessoa)
 
-{{ $livro->titulo }} <br>
+{{ $pessoa->nome }} <br>
 
 @endforeach
 
@@ -60,8 +60,8 @@ form {
 
 <br><br><br><br>
 
-<form action="livro/criar" method="get" target="_blank">
-         <button type="submit">Cadastrar Novo Livro</button>
+<form action="pessoa/criar" method="get" target="_blank">
+         <button type="submit">Cadastrar Nova Pessoa</button>
       </form>
 
       <!-- por alguma razão, os botões normais não funcionam nessa página

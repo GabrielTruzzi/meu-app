@@ -72,31 +72,29 @@
 </style>
 
 <head>
-<title>Cadastrar Novo Livro</title>
+<title>Cadastrar Nova Pessoa</title>
 </head>
 <body>
 
 <script src="jquery.min.js"></script>
 <div class="container">
-  <h1>Cadastro de novo livro</h1>
+  <h1>Cadastro de Nova Pessoa</h1>
   <br><br>
   <form method="post">
   @CSRF
 
-    <label for="titulo">Título</label>
-    <input type="text" name="titulo" id="titulo" placeholder="Memórias Póstumas de Brás Cubas"/>
+    <label for="nome">Nome</label>
+    <input type="text" name="nome" id="nome" placeholder="Maria"/>
     <br>
-    <label for="autor">Autor</label>
-    <input type="text" name="autor" id="autor" placeholder="Machado de Assis"/>
+    <label for="cpf">CPF</label>
+    <input type="text" name="cpf" id="cpf" maxlength="11" placeholder="00000000000"/>
     <br>
-    <label for="isbn">ISBN</label>
-    <input type="text" name="isbn" id="isbn" maxlength="13" placeholder="9788496356979"/>
+    <label for="email">Email</label>
+    <input type="text" name="email" id="email" placeholder="maria@email.com"/>
     <br>
-    <label for="procedencia">Procedencia:</label>
-    <select id="procedencia" name="procedencia">
-    <option value="Nacional">Nacional</option>
-    <option value="Internacional">Internacional</option>
-    </select>
+    <label for="idade">Idade</label>
+    <input type="text" name="idade" id="idade" maxlength="2" placeholder="25"/>
+    <br>
     <br><br>
     <button type="submit">Enviar</button>
 

@@ -28,7 +28,7 @@ class LivroController extends Controller
 
         $objeto_livro->save();
 
-        return redirect("/");
+        return redirect("/livro");
     }
 
 }
