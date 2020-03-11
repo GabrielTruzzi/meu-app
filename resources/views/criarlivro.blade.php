@@ -80,7 +80,8 @@
 <div class="container">
   <h1>Cadastro de novo livro</h1>
   <br><br>
-  <form action="" name="registration">
+  <form method="post" target="_blank">
+  @CSRF
 
     <label for="titulo">Título</label>
     <input type="text" name="titulo" id="titulo" placeholder="Memórias Póstumas de Brás Cubas"/>

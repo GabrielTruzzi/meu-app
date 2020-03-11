@@ -14,4 +14,8 @@ class LivroController extends Controller
         return view ('criarlivro');
     }
 
+    public function postar(){
+        echo "livro enviado com sucesso";
+    }
+
 }
