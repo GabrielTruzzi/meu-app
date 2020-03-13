@@ -71,6 +71,28 @@
   }
 </style>
 
+<script>
+function validarformulario() {
+  var w = document.forms["formulario"]["titulo"].value;
+  var x = document.forms["formulario"]["isbn"].value;
+  var y = document.forms["formulario"]["autor"].value;
+
+  if (w == "") {
+    alert("O campo título deve ser preenchido");
+    return false;
+  }
+  if (x == "") {
+    alert("O campo ISBN deve ser preenchido");
+    return false;
+  }  
+  if (y == "") {
+    alert("O campo autor deve ser preenchido");
+    return false;
+  }    
+
+} 
+</script>
+
 <head>
 <title>Cadastrar Novo Livro</title>
 </head>
@@ -80,7 +102,7 @@
 <div class="container">
   <h1>Cadastro de novo livro</h1>
   <br><br>
-  <form method="post">
+  <form name="formulario" method="post" onsubmit="return validarformulario()">
   @CSRF
 
     <label for="titulo">Título</label>

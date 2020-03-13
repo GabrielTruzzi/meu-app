@@ -71,6 +71,37 @@
   }
 </style>
 
+<script>
+function validarformulario() {
+  var w = document.forms["formulario"]["nome"].value;
+  var x = document.forms["formulario"]["cpf"].value;
+  var y = document.forms["formulario"]["email"].value;
+  var z = document.forms["formulario"]["idade"].value;
+
+  if (w == "") {
+    alert("O campo nome deve ser preenchido");
+    return false;
+  }
+  if (x == "") {
+    alert("O campo CPF deve ser preenchido");
+    return false;
+  }
+  if (inputs[x].value < 11). {
+    alert("O campo CPF deve conter 11 dígitos");
+    return false;
+  }  
+  if (y == "") {
+    alert("O campo email deve ser preenchido");
+    return false;
+  }  
+  if (z == "") {
+    alert("O campo idade deve ser preenchido");
+    return false;
+  }   
+
+} 
+</script>
+
 <head>
 <title>Cadastrar Nova Pessoa</title>
 </head>
@@ -80,7 +111,7 @@
 <div class="container">
   <h1>Cadastro de Nova Pessoa</h1>
   <br><br>
-  <form method="post">
+  <form name="formulario" method="post" onsubmit="return validarformulario()">
   @CSRF
 
     <label for="nome">Nome</label>
@@ -90,7 +121,7 @@
     <input type="text" name="cpf" id="cpf" maxlength="11" placeholder="00000000000"/>
     <br>
     <label for="email">Email</label>
-    <input type="text" name="email" id="email" placeholder="maria@email.com"/>
+    <input type="email" name="email" id="email" placeholder="maria@email.com"/>
     <br>
     <label for="idade">Idade</label>
     <input type="text" name="idade" id="idade" maxlength="2" placeholder="25"/>
